@@ -6,7 +6,7 @@ class DetailsBottom extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: ScreenUtil().setWidth(750),
-      height: ScreenUtil().setHeight(80),
+      height: ScreenUtil().setHeight(90),
       //padding: EdgeInsets.all(15),
       child: Row(
         children: <Widget>[
