@@ -6,7 +6,7 @@ class CartBottom extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(5.0),
+      margin: EdgeInsets.all(3.0),
       color: Colors.white,
       width: ScreenUtil().setWidth(750),
       child: Row(
@@ -22,6 +22,7 @@ class CartBottom extends StatelessWidget {
   //全选按钮
   Widget _selectAllBtn(){
     return Container(
+      width: ScreenUtil().setWidth(180),
       child: Row(
         children: <Widget>[
           Checkbox(
@@ -39,7 +40,7 @@ class CartBottom extends StatelessWidget {
   Widget _allPriceArea(){
 
     return Container(
-      width: ScreenUtil().setWidth(430),
+      width: ScreenUtil().setWidth(400),
       alignment: Alignment.centerRight,
       child: Column(
         children: <Widget>[
@@ -47,21 +48,21 @@ class CartBottom extends StatelessWidget {
             children: <Widget>[
               Container(
                 alignment: Alignment.centerRight,
-                width: ScreenUtil().setWidth(280),
+                width: ScreenUtil().setWidth(250),
                 child: Text(
                   '合计:',
                   style:TextStyle(
-                    fontSize: ScreenUtil().setSp(36)
+                    fontSize: ScreenUtil().setSp(32)
                   )
                 ), 
               ),
               Container(
                  alignment: Alignment.centerLeft,
-                width: ScreenUtil().setWidth(150),
+                width: ScreenUtil().setWidth(140),
                 child: Text(
                   '￥1922',
                   style:TextStyle(
-                    fontSize: ScreenUtil().setSp(36),
+                    fontSize: ScreenUtil().setSp(32),
                     color: Colors.red,
                   )
                 ),
@@ -72,8 +73,8 @@ class CartBottom extends StatelessWidget {
             ],
           ),
           Container(
-            width: ScreenUtil().setWidth(430),
-            alignment: Alignment.centerRight,
+            width: ScreenUtil().setWidth(400),
+            alignment: Alignment.center,
             child: Text(
               '满10元免配送费，预购免配送费',
               style: TextStyle(

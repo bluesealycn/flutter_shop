@@ -35,15 +35,16 @@ class CartProvide with ChangeNotifier{
         'goodsName':goodsName,
         'count':count,
         'price':price,
-        'images':images
+        'images':images,
+        'isCheck': true  //是否已经选择
       };
       tempList.add(newGoods);
       cartList.add(CartInfoModel.fromJson(newGoods));
     }
     //把字符串进行encode操作，
     cartString= json.encode(tempList).toString();
-    print("字符串>>>>>>>>>>>>>>>>>>>${cartString}");
-    print("数据模型>>>>>>>>>>>>>>>>>>>${cartList}");
+    //print("字符串>>>>>>>>>>>>>>>>>>>${cartString}");
+    //print("数据模型>>>>>>>>>>>>>>>>>>>${cartList}");
 
     prefs.setString('cartInfo', cartString);//进行持久化
     notifyListeners();
